@@ -55,6 +55,24 @@
       }
     },
     {
+      "identity" : "jwt",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/vapor/jwt.git",
+      "state" : {
+        "revision" : "f9dc4cb5c49e120dd73b740a571cfd289ac30cb8",
+        "version" : "4.2.0"
+      }
+    },
+    {
+      "identity" : "jwt-kit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/vapor/jwt-kit.git",
+      "state" : {
+        "revision" : "718e94f917a4c053758e5bb50c28553561a6ef91",
+        "version" : "4.6.0"
+      }
+    },
+    {
       "identity" : "multipart-kit",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/multipart-kit.git",
@@ -88,6 +106,24 @@
       "state" : {
         "revision" : "9e181d685a3dec1eef1fc6dacf606af364f86d68",
         "version" : "4.5.0"
+      }
+    },
+    {
+      "identity" : "sendgrid",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/vapor-community/sendgrid.git",
+      "state" : {
+        "revision" : "c744bc4398bd8dec50e3a6cfb0cdeca1aa853c07",
+        "version" : "4.0.0"
+      }
+    },
+    {
+      "identity" : "sendgrid-kit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/vapor-community/sendgrid-kit.git",
+      "state" : {
+        "revision" : "2da9f9558c690af07219b1e63f126105b747fec8",
+        "version" : "1.1.0"
       }
     },
     {

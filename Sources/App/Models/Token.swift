@@ -19,11 +19,11 @@ final class Token : Model {
     public var value : String
     
     @Parent(key: "userId")
-    public var user : UserData
+    public var user : UserDataDTO
     
     public init() { }
     
-    public init(id: UUID? = nil, value: String, userId: UserData.IDValue) {
+    public init(id: UUID? = nil, value: String, userId: UserDataDTO.IDValue) {
         self.id = id
         self.value = value
         self.$user.id = userId
@@ -32,7 +32,7 @@ final class Token : Model {
 
 extension Token : Content {
     
-    static func generate(for user: UserData) throws -> Token {
+    static func generate(for user: UserDataDTO) throws -> Token {
         let random = [UInt8].random(count: 16).base64
         do {
             return try Token(value: random, userId: user.requireID())
@@ -48,7 +48,7 @@ extension Token : ModelTokenAuthenticatable {
         return true
     }
     
-    typealias User = App.UserData
+    typealias User = App.UserDataDTO
     
     static let userKey = \Token.$user
     

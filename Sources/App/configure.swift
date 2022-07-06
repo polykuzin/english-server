@@ -19,6 +19,7 @@ public func configure(_ app: Application) throws {
         database: Environment.get("DATABASE_NAME") ?? "vapor_database"
     ), as: .psql)
     
+    app.migrations.add(CreateUserDataAdmin())
     app.migrations.add(CreateUserData())
     app.migrations.add(CreateToken())
     

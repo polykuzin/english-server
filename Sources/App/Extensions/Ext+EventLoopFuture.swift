@@ -7,18 +7,18 @@
 
 import Vapor
 
-extension EventLoopFuture where Value : UserData {
+extension EventLoopFuture where Value : UserDataDTO {
     
-    func convertToPublic() -> EventLoopFuture<UserData.Public> {
+    func convertToPublic() -> EventLoopFuture<UserDataDTO.Public> {
         return self.map { user in
             return user.convertToPublic()
         }
     }
 }
 
-extension EventLoopFuture where Value == Array<UserData> {
+extension EventLoopFuture where Value == Array<UserDataDTO> {
     
-    func convertToPublic() -> EventLoopFuture<[UserData.Public]> {
+    func convertToPublic() -> EventLoopFuture<[UserDataDTO.Public]> {
         return self.map {
             $0.convertToPublic()
         }

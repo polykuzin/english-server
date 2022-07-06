@@ -7,9 +7,9 @@
 
 import Vapor
 
-extension Collection where Element : UserData {
+extension Collection where Element : UserDataDTO {
     
-    func convertToPublic() -> [UserData.Public] {
+    func convertToPublic() -> [UserDataDTO.Public] {
         return self.map {
             $0.convertToPublic()
         }
