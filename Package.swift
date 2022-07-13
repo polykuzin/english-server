@@ -9,16 +9,16 @@ let package = Package(
     dependencies: [
         
         /// 🕸 JSON Web Token
-        .package(url: "https://github.com/vapor/jwt.git", from: "4.0.0"),
+        .package(url: "https://github.com/vapor/jwt.git", from: "3.0.0"),
         
         /// 💧 A server-side Swift web framework.
-        .package(url: "https://github.com/vapor/vapor.git", from: "4.0.0"),
+        .package(url: "https://github.com/vapor/vapor.git", from: "3.0.0"),
         
         /// 💻 ORM framework
-        .package(url: "https://github.com/vapor/fluent.git", from: "4.0.0"),
+        
         
         /// 💽 SQLite driver
-        .package(url: "https://github.com/vapor/fluent-sqlite.git", from: "3.0.0"),
+        .package(url: "https://github.com/vapor/fluent-sqlite.git", from: "3.0.0")
     ],
     targets: [
         .executableTarget(
@@ -26,7 +26,6 @@ let package = Package(
             dependencies: [
                 .product(name: "JWT", package: "jwt"),
                 .product(name: "Vapor", package: "vapor"),
-                .product(name: "Fluent", package: "fluent"),
                 .product(name: "FluentSQLite", package: "fluent-sqlite")
             ]
         ),
